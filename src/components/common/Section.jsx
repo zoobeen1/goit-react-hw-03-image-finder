@@ -1,4 +1,3 @@
-import propTypes from 'prop-types';
 export const Section = ({ title, children }) => {
   return (
     <section>
@@ -6,8 +5,4 @@ export const Section = ({ title, children }) => {
       {children}
     </section>
   );
-};
-Section.propTypes = {
-  title: ReactPropTypes.string.isRequired,
-  children: ReactPropTypes.node.isRequired,
 };
