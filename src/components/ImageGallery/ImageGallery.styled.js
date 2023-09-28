@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { theme } from './theme';
 
 export const List = styled.ul`
   display: grid;
@@ -13,3 +12,4 @@ export const List = styled.ul`
   margin-left: auto;
   margin-right: auto;
 `;
+
