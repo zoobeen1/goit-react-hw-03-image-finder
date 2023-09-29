@@ -12,11 +12,6 @@ export class App extends Component {
   state = {
     query: '',
   };
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.query !== prevState.query) {
-      console.log('Стэйт обновился');
-    }
-  }
 
   handleFormSubmit = searchQuery => {
     this.setState({ query: searchQuery });
@@ -25,9 +20,9 @@ export class App extends Component {
   render() {
     return (
       <>
-        <Searchbar onSubmit={this.handleFormSubmit} />;
+        <Searchbar onSubmit={this.handleFormSubmit} />
         <ImageGallery query={this.state.query} />
-        <ToastContainer autoClose={2000} />;
+        <ToastContainer autoClose={2000} />
       </>
     );
   }

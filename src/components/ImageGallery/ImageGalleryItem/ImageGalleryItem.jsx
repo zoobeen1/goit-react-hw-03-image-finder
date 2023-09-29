@@ -1,10 +1,11 @@
-/* <li class="gallery-item">
-  <img src="" alt="" />
-</li>; */
+import { ListItem, Image } from './ImageGalleryItem.styled';
 
-// import { ListItem } from './ImageGalleryItem.styled';
-
-// export const ImageGalleryItem = ({ imgUrl, imgName }) => {
-//   // return console.log('ImageGalleryItem props: ', props);
-//   <img src={imgUrl} alt={imgName} />;
-// };
+export const ImageGalleryItem = ({ imgUrl, imgName, url }) => {
+  return (
+    <ListItem>
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <Image src={imgUrl} alt={imgName} />
+      </a>
+    </ListItem>
+  );
+};
