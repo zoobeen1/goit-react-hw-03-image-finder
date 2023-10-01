@@ -2,10 +2,10 @@ import { Component } from 'react';
 import { toast } from 'react-toastify';
 import {
   SearchbarStyled,
-  Form,
-  Input,
-  Button,
-  ButtonLabel,
+  FormStyled,
+  InputStyled,
+  ButtonStyled,
+  ButtonLabelStyled,
 } from './Searchbar.styled';
 //Готово! Работает
 //Возвращает в стэйт аппа поисковый запрос после нажатия на кнопку поиска
@@ -33,11 +33,11 @@ export class Searchbar extends Component {
   render() {
     return (
       <SearchbarStyled>
-        <Form onSubmit={this.handleSubmit}>
-          <Button type="submit">
-            <ButtonLabel>Search</ButtonLabel>
-          </Button>
-          <Input
+        <FormStyled onSubmit={this.handleSubmit}>
+          <ButtonStyled type="submit">
+            <ButtonLabelStyled>Search</ButtonLabelStyled>
+          </ButtonStyled>
+          <InputStyled
             type="text"
             name="search"
             autocomplete="off"
@@ -46,7 +46,7 @@ export class Searchbar extends Component {
             placeholder="Search images and photos"
             onChange={this.handleChange}
           />
-        </Form>
+        </FormStyled>
       </SearchbarStyled>
     );
   }

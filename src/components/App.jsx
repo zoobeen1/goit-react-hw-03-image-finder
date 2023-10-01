@@ -20,7 +20,7 @@ export class App extends Component {
 
   togleModal = () => {
     this.setState(({ showModal }) => ({
-      showModal: showModal,
+      showModal: !showModal,
     }));
   };
 
@@ -46,7 +46,7 @@ export class App extends Component {
 
         <ToastContainer autoClose={1000} />
         {showModal && (
-          <Modal>
+          <Modal togleModal={this.togleModal}>
             <img src={imgUrl} alt={imgName} />
           </Modal>
         )}

@@ -6,19 +6,24 @@ const modalRoot = document.querySelector('#modal-root');
 
 export class Modal extends Component {
   componentDidMount() {
-    window.addEventListener('keydown', e => {
-      if (e.code === 'Escape') {
-        console.log('Escape pressed');
-      }
-    });
+    window.addEventListener('keydown', this.handleKeyDown);
   }
 
-  componentWillUnmount() {}
-
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+  }
+  handleKeyDown = e => {
+    if (e.code === 'Escape') {
+      this.props.togleModal();
+    }
+  };
+  handleBakcdropClick = e => {
+    e.currentTarget === e.target && this.props.togleModal();
+  };
   render() {
     const { children } = this.props;
     return createPortal(
-      <StyledOverlay>
+      <StyledOverlay onClick={this.handleBakcdropClick}>
         <StyledModal>{children}</StyledModal>
       </StyledOverlay>,
       modalRoot

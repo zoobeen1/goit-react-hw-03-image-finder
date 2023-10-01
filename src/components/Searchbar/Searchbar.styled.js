@@ -18,7 +18,7 @@ export const SearchbarStyled = styled.header`
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
 
-export const Form = styled.form`
+export const FormStyled = styled.form`
   display: flex;
   align-items: center;
   width: 100%;
@@ -28,7 +28,7 @@ export const Form = styled.form`
   overflow: hidden;
 `;
 
-export const Button = styled.button`
+export const ButtonStyled = styled.button`
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -54,7 +54,7 @@ export const Button = styled.button`
   }
 `;
 
-export const ButtonLabel = styled.span`
+export const ButtonLabelStyled = styled.span`
   position: absolute;
   width: 1px;
   height: 1px;
@@ -67,7 +67,7 @@ export const ButtonLabel = styled.span`
   color: #000;
 `;
 
-export const Input = styled.input`
+export const InputStyled = styled.input`
   display: inline-block;
   width: 100%;
   font: inherit;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const LoadMore = styled.button`
+export const ButtonStyled = styled.button`
   padding: 8px 16px;
   margin-top: 20px;
   margin-left: auto;
