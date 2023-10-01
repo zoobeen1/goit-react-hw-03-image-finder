@@ -8,9 +8,8 @@ const params = {
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: true,
-  per_page: 12,
+  per_page: 4,
   page: 1,
-  error: '',
 };
 const instance = axios.create({
   baseURL: BASE_URL,
@@ -24,10 +23,8 @@ async function getPhotos() {
     });
     return await resp.data;
   } catch (err) {
-    console.log(err);
-    params = {
-      error: err,
-    };
+    console.log('Трай кетч - ', err);
+    return err;
   }
 }
 export default { params, getPhotos };
