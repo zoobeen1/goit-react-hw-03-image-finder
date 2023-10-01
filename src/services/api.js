@@ -27,4 +27,5 @@ async function getPhotos() {
     return err;
   }
 }
-export default { params, getPhotos };
+const API = { params, getPhotos };
+export default API;
