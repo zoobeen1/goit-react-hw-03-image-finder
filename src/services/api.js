@@ -8,7 +8,7 @@ const params = {
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: true,
-  per_page: 4,
+  per_page: 12,
   page: 1,
 };
 const instance = axios.create({

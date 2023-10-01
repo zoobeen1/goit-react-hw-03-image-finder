@@ -16,11 +16,12 @@ export class Searchbar extends Component {
   // очищает поле ввода
   handleSubmit = e => {
     e.preventDefault();
-    if (this.state.searchQuery.trim() === '') {
+    const { searchQuery } = this.state;
+    if (searchQuery.trim() === '') {
       toast.error('Введите запрос прежде чем отправлять!!!');
       return;
     }
-    this.props.onSubmit(this.state.searchQuery);
+    this.props.onSubmit(searchQuery);
     this.setState({ searchQuery: '' });
   };
   // Вызывается при изменении поля ввода
